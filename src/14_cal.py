@@ -44,5 +44,5 @@ elif arg_length == 2:
   month = int(sys.argv[1])
   calendar.prmonth(current_year, month)
 else :
-  print('Month and year should be provided like python3 14_cal.py 4 2015')
+  print('Month and year should be provided like python3 14_cal.py month [year]')
   exit()

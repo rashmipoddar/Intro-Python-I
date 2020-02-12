@@ -15,13 +15,17 @@ print(f1(1, 2))
 # Note: Google for "python arbitrary arguments" and look for "*args"
 
 # YOUR CODE HERE
+# def f2(*numbers):
+#   print('The args are', *numbers)
+#   print('The arguments passed are', numbers)
+#   sum = 0
+#   for num in numbers:
+#     sum += num
+#   return sum
+
+# Alternate solution
 def f2(*numbers):
-  print('The args are', *numbers)
-  print('The arguments passed are', numbers)
-  sum = 0
-  for num in numbers:
-    sum += num
-  return sum
+  return sum(numbers)
 
 print(f2(1))                    # Should print 1
 print(f2(1, 3))                 # Should print 4
@@ -58,8 +62,11 @@ print(f3(8))     # Should print 9
 def f4(**kwargs):
   print('Dict passed as argument', *kwargs)
   print('Dict received', kwargs)
-  for key, value in kwargs.items():
-    print(f'key: {key}, value: {value}')
+  # for key, value in kwargs.items():
+  #   print(f'key: {key}, value: {value}')
+  # Alternate solution
+  for key in kwargs:
+    print(f"key: {key}, value: {kwargs[key]}")
 
 # Should print
 # key: a, value: 12
