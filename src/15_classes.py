@@ -28,7 +28,8 @@ class Geocache(Waypoint):
     self.difficulty = difficulty
     self.size = size
     super().__init__(name, lat, lon)
-
+  def __repr__(self):
+    return f'REPR {self.name}, {self.lat}, {self.lon}'
   def __str__(self):
     return '{self.name} {self.difficulty} {self.size} {self.lat} {self.lon}'.format(self=self)
 
